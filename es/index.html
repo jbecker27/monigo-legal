@@ -1,16 +1,16 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Política de privacidad de Monigo</title><style>body{font:16px/1.6 -apple-system,system-ui,sans-serif;max-width:720px;margin:0 auto;padding:24px 16px;color:#1c1c1e;background:#fff}h1{font-size:1.7rem}h2{margin-top:2rem;font-size:1.25rem}h3{font-size:1.05rem}a{color:#0a4fd6}nav{margin-bottom:1.5rem;font-size:.9rem}@media(prefers-color-scheme:dark){body{background:#000;color:#f2f2f7}a{color:#6ea8ff}}</style></head><body><nav><a href="../de/">Deutsch</a> · <a href="../en/">English</a> · <a href="../fr/">Français</a> · <a href="../es/">Español</a> · <a href="impressum/">Aviso legal</a></nav><h1>Política de privacidad de Monigo</h1>
-<p><strong>Última actualización:</strong> 23 sept. 2026</p>
+<p><strong>Última actualización:</strong> 7 oct. 2026</p>
 <h2>1. Responsable del tratamiento</h2>
 <p>El responsable del tratamiento de datos en el sentido del Reglamento General de Protección de Datos (RGPD) es:</p>
 <p>Julian Becker<br>c/o SourceArt · VM-00003535<br>Fritz-Thiele-Straße 3<br>28279 Bremen-Obervieland<br>Alemania<br>Correo electrónico: <a href="mailto:monigo_app@icloud.com">monigo_app@icloud.com</a></p>
 <h2>2. Principio: tus datos permanecen en tu dispositivo</h2>
 <p>Monigo está diseñada para minimizar los datos. Tus datos financieros y los extractos bancarios que subes se tratan y se almacenan <strong>exclusivamente en tu dispositivo</strong>. No hay cuenta de usuario, ni inicio de sesión, ni servidor central al que se transmitan automáticamente tus movimientos o extractos.</p>
-<p>Los datos personales solo salen de tu dispositivo en dos casos claramente delimitados que se describen a continuación: al procesar una suscripción (sección 5) y al enviar de forma <strong>voluntaria</strong> datos de conciliación anonimizados que tú mismo activas (sección 4).</p>
+<p>Los datos personales solo salen de tu dispositivo en tres casos claramente delimitados que se describen a continuación: al enviar de forma <strong>voluntaria</strong> datos de conciliación anonimizados (sección 4) o una muestra de formato de un extracto bancario (sección 5), que tú mismo activas, y al procesar una suscripción (sección 6).</p>
 <h2>3. Qué datos se tratan</h2>
 <h3>3.1 Datos financieros que introduces</h3>
 <p>Los movimientos, importes, categorías, notas e información similar que introduces en la app se almacenan localmente en el dispositivo (Apple SwiftData). No se transmiten a nosotros ni a terceros.</p>
 <h3>3.2 Importación de extractos bancarios</h3>
-<p>Cuando importas un extracto bancario (PDF), este se lee <strong>en el dispositivo</strong> y se concilia con los movimientos que has introducido. Ni el extracto ni los datos derivados de él salen del dispositivo en este proceso.</p>
+<p>Cuando importas un extracto bancario (PDF), este se lee <strong>en el dispositivo</strong> y se concilia con los movimientos que has introducido. Ni el extracto ni los datos derivados de él salen del dispositivo en este proceso. Si Monigo no puede leer un extracto, o no de forma fiable, la app prepara una muestra de formato depurada que puedes enviarnos voluntariamente (sección 5); si no la envías, no sale del dispositivo.</p>
 <h3>3.3 IA en el dispositivo para el enriquecimiento</h3>
 <p>En los dispositivos compatibles, Monigo puede utilizar una IA en el dispositivo (Apple Foundation Models) para mejorar las sugerencias de categoría y nombre en la conciliación. Este tratamiento se realiza <strong>exclusivamente en el dispositivo</strong>; no se efectúa ninguna llamada a la nube. Si la función no está disponible en tu dispositivo, la app sigue funcionando igual con los valores locales.</p>
 <h2>4. Envío voluntario de datos de conciliación anonimizados</h2>
@@ -25,7 +25,20 @@
 <li><strong>Base jurídica:</strong> tu consentimiento (art. 6.1.a del RGPD). Puedes retirar este consentimiento en cualquier momento con efecto futuro no enviando más datos; los datos ya enviados no se ven afectados.</li>
 </ul>
 <p><strong>Nota:</strong> la depuración se basa en patrones y se realiza con el máximo cuidado, pero no puede garantizar en cada caso que un texto de movimiento no contenga ya ningún resto de datos personales. En particular, los <strong>nombres</strong> que aparecen en el texto del movimiento del extracto (p. ej. en transferencias a particulares) no se eliminan automáticamente. La vista previa te permite comprobarlo antes de enviar.</p>
-<h2>5. Suscripciones (Monigo Pro)</h2>
+<h2>5. Envío voluntario de una muestra de formato</h2>
+<p>Si Monigo no puede leer un extracto bancario (formato desconocido) o no puede cuadrar el total de los movimientos leídos con el saldo indicado en el extracto, la app te ofrece enviarnos una <strong>muestra de formato</strong> de ese extracto. La usamos para mejorar la lectura de los extractos de tu banco.</p>
+<ul>
+<li><strong>Voluntario y expreso:</strong> solo se transmite si pulsas activamente «Enviar muestra anónima» o «Compartir muestra anónima» y confirmas el envío.</li>
+<li><strong>En las versiones beta (TestFlight):</strong> la muestra de formato se prepara en cada importación y se ofrece junto con los datos de conciliación anonimizados (sección 4) mediante «Enviar datos anónimos», aunque el saldo cuadre. También aquí solo se transmite algo tras tu pulsación expresa.</li>
+<li><strong>Vista previa:</strong> «Vista previa de los datos» te muestra de antemano exactamente qué se enviaría.</li>
+<li><strong>Qué se transmite:</strong> el texto extraído del PDF del extracto de forma depurada –entre otros, fechas, importes, saldos y conceptos de los movimientos (que suelen contener nombres de comercios o de beneficiarios)–, además de la versión de la app, el número de páginas, el motivo de la oferta y los métodos de lectura implicados. El PDF en sí nunca se transmite.</li>
+<li><strong>Qué se elimina:</strong> el nombre y la dirección del encabezado; los nombres reconocidos allí como titular de la cuenta, aparezcan donde aparezcan en el extracto; así como los IBAN, direcciones de correo electrónico y secuencias largas de cifras (p. ej. números de cuenta, de tarjeta o de referencia).</li>
+<li><strong>Vía de transmisión:</strong> como se describe en la sección 4, por correo electrónico a <a href="mailto:monigo_app@icloud.com">monigo_app@icloud.com</a> o mediante la opción de compartir que elijas.</li>
+<li><strong>Finalidad:</strong> únicamente mejorar la lectura de extractos bancarios y la conciliación.</li>
+<li><strong>Base jurídica:</strong> tu consentimiento (art. 6.1.a del RGPD). Puedes retirarlo en cualquier momento con efecto futuro no enviando más muestras.</li>
+</ul>
+<p><strong>Nota:</strong> esta depuración también se basa en patrones. En extractos con una estructura poco habitual puede quedar en algún caso un nombre o una dirección; los nombres de beneficiarios u ordenantes en los conceptos no se eliminan automáticamente. Por eso, revisa la vista previa antes de enviar.</p>
+<h2>6. Suscripciones (Monigo Pro)</h2>
 <p>Las funciones de pago se desbloquean mediante una suscripción. El pago se procesa a través de tu cuenta de App Store en Apple; nosotros <strong>no</strong> recibimos datos de pago como números de tarjeta de crédito.</p>
 <p>Para gestionar los derechos de acceso utilizamos el servicio <strong>RevenueCat</strong>. Este trata un identificador de usuario de la app anónimo y generado aleatoriamente, así como el estado de compra, con el fin de desbloquear las funciones adquiridas y restaurar las compras.</p>
 <ul>
@@ -33,15 +46,15 @@
 <li>RevenueCat: <a href="https://www.revenuecat.com/privacy/">https://www.revenuecat.com/privacy/</a></li>
 </ul>
 <p>La base jurídica es la ejecución del contrato de prestación de las funciones de la app (art. 6.1.b del RGPD).</p>
-<h2>6. TestFlight (fase beta)</h2>
+<h2>7. TestFlight (fase beta)</h2>
 <p>Mientras Monigo se distribuya a través de TestFlight de Apple, Apple trata, en el marco de tu participación en la beta, datos como tu dirección de correo electrónico e información de uso y de fallos. Este tratamiento lo realiza Apple; se aplica la política de privacidad de Apple: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></p>
-<h2>7. Sin seguimiento, sin publicidad</h2>
+<h2>8. Sin seguimiento, sin publicidad</h2>
 <p>Monigo no contiene <strong>ninguna</strong> publicidad, <strong>ninguna</strong> herramienta de análisis o seguimiento de terceros y <strong>ningún</strong> perfil de usuario entre dispositivos.</p>
-<h2>8. Plazo de conservación</h2>
-<p>Tus datos almacenados localmente se conservan mientras la app esté instalada en tu dispositivo. Desinstalar la app elimina los datos almacenados localmente. Los datos de conciliación anonimizados enviados voluntariamente se conservan solo el tiempo necesario para mejorar la conciliación.</p>
-<h2>9. Tus derechos</h2>
+<h2>9. Plazo de conservación</h2>
+<p>Tus datos almacenados localmente se conservan mientras la app esté instalada en tu dispositivo. Desinstalar la app elimina los datos almacenados localmente. Los datos de conciliación anonimizados y las muestras de formato enviados voluntariamente se conservan solo el tiempo necesario para mejorar la conciliación y la lectura de extractos.</p>
+<h2>10. Tus derechos</h2>
 <p>Conforme al RGPD, tienes los siguientes derechos: acceso (art. 15), rectificación (art. 16), supresión (art. 17), limitación del tratamiento (art. 18), portabilidad de los datos (art. 20), oposición (art. 21) y retirada del consentimiento otorgado (art. 7.3). Dado que la mayoría de los datos residen exclusivamente en tu dispositivo, tienes control directo sobre ellos.</p>
 <p>También tienes derecho a presentar una reclamación ante una autoridad de control de protección de datos.</p>
 <p>Para cualquier cuestión relacionada con la privacidad, puedes contactarnos en: <a href="mailto:monigo_app@icloud.com">monigo_app@icloud.com</a></p>
-<h2>10. Cambios en esta política de privacidad</h2>
+<h2>11. Cambios en esta política de privacidad</h2>
 <p>Adaptaremos esta política de privacidad si cambia nuestro tratamiento de datos. Se aplica la versión vigente disponible en la app o en la dirección publicada.</p></body></html>
